@@ -45,7 +45,7 @@ func (conf *Config) GetTendermintConfig() (*cfg.Config, error) {
 	config.PrivValidatorState = filepath.Join(conf.dataDir, "config", "priv_validator_state.json")
 	config.NodeKey = filepath.Join(conf.dataDir, "config", "node_key.json")
 	config.Consensus.SetWalFile(filepath.Join(conf.dataDir, "store", "cs.wal", "wal"))
-	config.Consensus.CreateEmptyBlocksInterval = time.Second * 60
+	config.Consensus.CreateEmptyBlocksInterval = time.Second * 1
 	config.P2P.AddrBookStrict = false
 	config.P2P.AddrBook = filepath.Join(conf.dataDir, "store", "addrbook.json")
 	config.Genesis = filepath.Join(conf.dataDir, "config", "vastchain-genesis.json")
